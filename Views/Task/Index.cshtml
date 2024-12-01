@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TaskManagementApp.Models.TaskModel>
+
+<h1>Task Management</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Task</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@task.Priority</td>
+                <td>@(task.DueDate?.ToString("dd/MM/yyyy") ?? "No due date")</td>
+                <td>@(task.IsCompleted ? "Completed" : "Pending")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@task.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@task.Id" onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
