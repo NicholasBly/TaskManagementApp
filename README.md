@@ -9,36 +9,57 @@ This is a personal task manager built with ASP.NET Core MVC on .NET 9.0. It’s 
 
 ## Features
 Full CRUD (Create, Read, Update, Delete) for managing tasks
+
 Set priorities for tasks
+
 Track due dates and completion status
+
 Validate form inputs to prevent errors
+
 Repository Pattern: Keeps the code organized and testable
+
 Dependency Injection: Makes the app flexible and easy to maintain
+
 Entity Framework Core: Handles the data storage using an in-memory database
+
 Model Validation: Ensures data is clean and ready for use
+
 Separation of Concerns: Keeps everything modular and manageable
 
 ## Tech Stack
 ASP.NET Core MVC
+
 Entity Framework Core
+
 C# 10
+
 Bootstrap (for a clean, simple UI)
 
 ## How to Run
 Install .NET 6+ SDK.
+
 Clone the repo.
+
 Run dotnet restore to get dependencies.
+
 Run dotnet run to start the app
 
 ## What I've Learned
 How the MVC pattern works
+
 Dependency injection
+
 The basics of Entity Framework
+
 SOLID principles
+
 How to validate models and use a service layer
 
 ## Future Implementation Ideas
 Adding user accounts and authentication
+
 Switching to a persistent database for storing tasks
+
 Adding filters to sort tasks more effectively
+
 Making the design fully responsive for all devices
